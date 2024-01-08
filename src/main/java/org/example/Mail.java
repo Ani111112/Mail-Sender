@@ -14,69 +14,69 @@ import java.util.Properties;
 
 public class Mail {
     public void mailSender() {
-//        List<String> emailList = Arrays.asList(
-//                "hrmukta.hiring1@gmail.com",
-//                "apply@mhtechin.com",
-//                "Rucha.Desai@ril.com",
-//                "divyani.ghadi@ril.com",
-//                "divya.tagaya@codiant.com",
-//                "bhavnavashistha@bdo.in",
-//                "srivastavarajat1997@gmail.com",
-//                "ritika.singh1@genpact.com",
-//                "mayank.verma@indoautotech.com",
-//                "hr.ctinfotech@gmail.com",
-//                "megha.g@anikatechnologies.com",
-//                "hr@techmologics.com",
-//                "cacenquiry@voltas.com",
-//                "anjali.shashi@polycab.com",
-//                "hr@jaypee.in",
-//                "hrd@tantiagroup.com",
-//                "jobs@tantiagroup.com",
-//                "narayanan@vizhinjamport.in",
-//                "sathypal@vizhinjamport.in",
-//                "mkcilhrm@gmail.com",
-//                "hraudit@mkcinfrastructureltd.com",
-//                "sampanna@afcons.com",
-//                "hr@afcons.com",
-//                "career@apcoinfra.com",
-//                "hr@apcoinfra.com",
-//                "ashwini.pareek@hginfra.com",
-//                "hrd@pncinfratech.com",
-//                "hr@pncinfratech.com",
-//                "hr@barbrikindia.com",
-//                "Varsha@barbrikindia.com",
-//                "bipin.c@grinfra.com",
-//                "career@grinfra.com",
-//                "hr@grinfra.com",
-//                "Riyaz.ahmed@siemens.com",
-//                "careers@gayatri.co.in",
-//                "preeti.sharma@aecom.com",
-//                "shreejiinfrajbp@gmail.com",
-//                "binkal.patel@mclindia.com",
-//                "kcc.del@gmail.com",
-//                "hrd@kccbuildcon.co.in",
-//                "moosa.sayed@hccindia.com",
-//                "sunil.sarna@ashokabuildcon.com",
-//                "careers@gammonindia.com",
-//                "jobs@rkc.co.in",
-//                "dharmendra.kori@jkumar.com",
-//                "hr@tataprojects.in",
-//                "hr@lninfra.com",
-//                "insoniya254@gmail.com",
-//                "careers@pdcegroup.com",
-//                "hr@liongroup.in",
-//                "vganesh@sheladia.co.in",
-//                "jobs@sheladia.com",
-//                "career@pcsindia.com",
-//                "poojakatyal@sainfra.com",
-//                "careers@satragroup.in",
-//                "happyn@satragroup.in",
-//                "vasanthi.nair@ictonline.com",
-//                "hr@regnanttechnologies.com",
-//                "hr@arysontechnologies.com"
-//        );
-
-        List<String> emailList = Arrays.asList("aniruddham427@gmail.com", "dipankarbhaduri8@gmail.com", "spritam675@gmail.com");
+        List<String> emailList = Arrays.asList(
+                "hrmukta.hiring1@gmail.com",
+                "apply@mhtechin.com",
+                "Rucha.Desai@ril.com",
+                "divyani.ghadi@ril.com",
+                "divya.tagaya@codiant.com",
+                "bhavnavashistha@bdo.in",
+                "srivastavarajat1997@gmail.com",
+                "ritika.singh1@genpact.com",
+                "mayank.verma@indoautotech.com",
+                "hr.ctinfotech@gmail.com",
+                "megha.g@anikatechnologies.com",
+                "hr@techmologics.com",
+                "cacenquiry@voltas.com",
+                "anjali.shashi@polycab.com",
+                "hr@jaypee.in",
+                "hrd@tantiagroup.com",
+                "jobs@tantiagroup.com",
+                "narayanan@vizhinjamport.in",
+                "sathypal@vizhinjamport.in",
+                "mkcilhrm@gmail.com",
+                "hraudit@mkcinfrastructureltd.com",
+                "sampanna@afcons.com",
+                "hr@afcons.com",
+                "career@apcoinfra.com",
+                "hr@apcoinfra.com",
+                "ashwini.pareek@hginfra.com",
+                "hrd@pncinfratech.com",
+                "hr@pncinfratech.com",
+                "hr@barbrikindia.com",
+                "Varsha@barbrikindia.com",
+                "bipin.c@grinfra.com",
+                "career@grinfra.com",
+                "hr@grinfra.com",
+                "Riyaz.ahmed@siemens.com",
+                "careers@gayatri.co.in",
+                "preeti.sharma@aecom.com",
+                "shreejiinfrajbp@gmail.com",
+                "binkal.patel@mclindia.com",
+                "kcc.del@gmail.com",
+                "hrd@kccbuildcon.co.in",
+                "moosa.sayed@hccindia.com",
+                "sunil.sarna@ashokabuildcon.com",
+                "careers@gammonindia.com",
+                "jobs@rkc.co.in",
+                "dharmendra.kori@jkumar.com",
+                "hr@tataprojects.in",
+                "hr@lninfra.com",
+                "insoniya254@gmail.com",
+                "careers@pdcegroup.com",
+                "hr@liongroup.in",
+                "vganesh@sheladia.co.in",
+                "jobs@sheladia.com",
+                "career@pcsindia.com",
+                "poojakatyal@sainfra.com",
+                "careers@satragroup.in",
+                "happyn@satragroup.in",
+                "vasanthi.nair@ictonline.com",
+                "hr@regnanttechnologies.com",
+                "hr@arysontechnologies.com",
+                "jobs@Zettabolt.com",
+                "EEO.Compliance@spglobal.com"
+        );
 
         for (String email : emailList) {
             // Replace these with your email credentials
@@ -123,7 +123,6 @@ public class Mail {
                 message.setFrom(new InternetAddress(senderEmail));
                 message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipientEmail));
                 message.setSubject("Application for Java Backend Developer Position");
-//                message.setText(emailContent);
 
                 // Create the message part
                 BodyPart messageBodyPart = new MimeBodyPart();
@@ -151,6 +150,7 @@ public class Mail {
                 // Send message
                 Transport.send(message);
                 System.out.println("OTP sent successfully!");
+                System.out.println(email);
             } catch (MessagingException e) {
                 throw new RuntimeException(e);
             }
