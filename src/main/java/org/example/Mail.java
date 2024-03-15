@@ -8,84 +8,58 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 public class Mail {
     public void mailSender() {
-        List<String> emailList = Arrays.asList(
-                "hrmukta.hiring1@gmail.com",
-                "apply@mhtechin.com",
-                "Rucha.Desai@ril.com",
-                "divyani.ghadi@ril.com",
-                "divya.tagaya@codiant.com",
-                "bhavnavashistha@bdo.in",
-                "srivastavarajat1997@gmail.com",
-                "ritika.singh1@genpact.com",
-                "mayank.verma@indoautotech.com",
-                "hr.ctinfotech@gmail.com",
-                "megha.g@anikatechnologies.com",
-                "hr@techmologics.com",
-                "cacenquiry@voltas.com",
-                "anjali.shashi@polycab.com",
-                "hr@jaypee.in",
-                "hrd@tantiagroup.com",
-                "jobs@tantiagroup.com",
-                "narayanan@vizhinjamport.in",
-                "sathypal@vizhinjamport.in",
-                "mkcilhrm@gmail.com",
-                "hraudit@mkcinfrastructureltd.com",
-                "sampanna@afcons.com",
-                "hr@afcons.com",
-                "career@apcoinfra.com",
-                "hr@apcoinfra.com",
-                "ashwini.pareek@hginfra.com",
-                "hrd@pncinfratech.com",
-                "hr@pncinfratech.com",
-                "hr@barbrikindia.com",
-                "Varsha@barbrikindia.com",
-                "bipin.c@grinfra.com",
-                "career@grinfra.com",
-                "hr@grinfra.com",
-                "Riyaz.ahmed@siemens.com",
-                "careers@gayatri.co.in",
-                "preeti.sharma@aecom.com",
-                "shreejiinfrajbp@gmail.com",
-                "binkal.patel@mclindia.com",
-                "kcc.del@gmail.com",
-                "hrd@kccbuildcon.co.in",
-                "moosa.sayed@hccindia.com",
-                "sunil.sarna@ashokabuildcon.com",
-                "careers@gammonindia.com",
-                "jobs@rkc.co.in",
-                "dharmendra.kori@jkumar.com",
-                "hr@tataprojects.in",
-                "hr@lninfra.com",
-                "insoniya254@gmail.com",
-                "careers@pdcegroup.com",
-                "hr@liongroup.in",
-                "vganesh@sheladia.co.in",
-                "jobs@sheladia.com",
-                "career@pcsindia.com",
-                "poojakatyal@sainfra.com",
-                "careers@satragroup.in",
-                "happyn@satragroup.in",
-                "vasanthi.nair@ictonline.com",
-                "hr@regnanttechnologies.com",
-                "hr@arysontechnologies.com",
-                "jobs@Zettabolt.com",
-                "EEO.Compliance@spglobal.com"
-        );
+        TreeSet<String> emailSet = new TreeSet<>();
+        emailSet.add("skannekanti@unocareer.com");
+        emailSet.add("krithika.bharatraj@cerner.com");
+        emailSet.add("gtomar@eteaminc.com");
+        emailSet.add("ibrahim@tekishub.com");
+        emailSet.add("nadia.taha@dxc.com");
+        emailSet.add("satheesh@infowaygroup.com");
+        emailSet.add("venkatasatyasri.golakoti@fenixcommerce.ai");
+        emailSet.add("kaibalya.das@flipkart.com");
+        emailSet.add("Palak.gupta@globussoft.com");
+        emailSet.add("hr@shreedhanya.co.in");
+        emailSet.add("vishal.sharma@whizglobal.com");
+        emailSet.add("divya.ra@twsol.com");
+        emailSet.add("anchal@mindaspire.in");
+        emailSet.add("sridhar.valmiki@in.nestle.com");
+        emailSet.add("vinay.k@quadranttechnologies.com");
+        emailSet.add("shireesha.b@aspiredsolutions.com");
+        emailSet.add("Shalini.jain@sunmobility.com");
+        emailSet.add("aravind.botla@innovapptive.com");
+        emailSet.add("praneetha.u@ncs-india.com");
+        emailSet.add("Ishareddy261@gmail.com");
+        emailSet.add("aftab@convextech.com");
+        emailSet.add("akshay@magicforce.us");
+        emailSet.add("prathamgholaphr@gmail.com");
+        emailSet.add("hanshika@vyzeinc.com");
+        emailSet.add("gowthami@precisiontechcorp.com");
+        emailSet.add("durgasravani.nekkanti@cloudangles.com");
+        emailSet.add("hemalatha@partner.hindustantimes.com");
+        emailSet.add("ibrahim@tekishub.com");
+        emailSet.add("aftab@convextech.com");
+        emailSet.add("karthik@ritwikinfotech.com");
+        emailSet.add("gokul.p@twsol.com");
+        emailSet.add("vinod@talentola.com");
+        emailSet.add("christy@sun-itsolutions.com");
+        emailSet.add("resin@thepuretalent.com");
+        emailSet.add("varun@infowaygroup.com");
+        emailSet.add("vineel@smartfolksinc.com");
 
-        for (String email : emailList) {
+        for (String email : emailSet) {
+            email = email.toLowerCase();
+//            if(email.charAt(0) != 'n') continue;
             // Replace these with your email credentials
             String senderEmail = "aniruddhamukherjee232@gmail.com";
             String appPassword = "sszv fvjp hzsy iaby";
             String recipientEmail = email;
             String applicantName = "Aniruddha Mukherjee";
             String currentCompany = "Quality and Testing Info Solutions Pvt. Ltd.";
-            String achievements = "optimizing data retrieval using MongoDB and leading a critical migration initiative.";
+            String achievements = "optimizing data retrieval using MongoDB and leading a critical migration initiative. Additionally, I introduced a comprehensive Redis cache system from scratch.";
             String education = "Data Structure and Algorithm course at AccioJob";
             String degree = "Bachelor's degree in Computer Application";
             String contactInformation = "8918464772";
@@ -97,6 +71,7 @@ public class Mail {
                     ", I've played a pivotal role in developing robust Java and Spring Boot applications, contributing to successful project execution. Notable achievements include " + achievements + "\n\n" +
                     "I have completed a comprehensive " + education +
                     " and hold a " + degree + ".\n\n" +
+                    "My expertise also extends to database management systems such as MongoDB and MySQL, where I've effectively implemented optimized solutions.\n\n" +
                     "Kindly find my attached resume for your consideration. I am eager to discuss how my skills can benefit your team.\n\n" +
                     "Thank you for your time.\n\n" +
                     "Best regards,\n\n" +
@@ -138,10 +113,10 @@ public class Mail {
 
                 // Part two is attachment
                 messageBodyPart = new MimeBodyPart();
-                String filename = "D:/Personal Work/Aniruddha_Mukherjee_CV.pdf"; // Replace with the actual file path
+                String filename = "D:/Personal Work/Aniruddha CV.pdf"; // Replace with the actual file path
                 DataSource source =  new FileDataSource(filename);
                 messageBodyPart.setDataHandler(new DataHandler((javax.activation.DataSource) source));
-                messageBodyPart.setFileName("Aniruddha_Mukherjee_CV.pdf");
+                messageBodyPart.setFileName("Aniruddha CV.pdf");
                 multipart.addBodyPart(messageBodyPart);
 
                 // Send the complete message parts
@@ -149,7 +124,7 @@ public class Mail {
 
                 // Send message
                 Transport.send(message);
-                System.out.println("OTP sent successfully!");
+//                System.out.println("OTP sent successfully!");
                 System.out.println(email);
             } catch (MessagingException e) {
                 throw new RuntimeException(e);
